@@ -1,0 +1,77 @@
+prefix: "&7[&bPlayerDisplay&7] &r"
+
+commands:
+  invalidPlayer: "&cUnknown player with name &6%player%"
+  noPlayersModified: "&cNo player modified"
+  invalidSelector: "&cInvalid selector: &6%selector%"
+
+  skin:
+    success:
+      change:
+        other: "&aSuccessfully changed the skin of &6%player%"
+        self: "&aSuccessfully changed your skin"
+        selector: "&aSuccessfully changed the skin of &6%amount%&a players"
+      reset:
+        other: "&aSuccessfully reset the skin of player &6%player%"
+        self: "&aSuccessfully reset your skin"
+        selector: "&aSuccessfully reset the skin of &6%amount%&a players"
+    error:
+      invalidURL: "&cThe provided url is not a valid skin url"
+      invalidPlayer: "&cThe provided name is no valid player name"
+      invalidSkin: "&cThere was an error loading the skin"
+    loading: "&7Attempting to load skin from url"
+
+  pd:
+    success:
+      hide:
+        other: "&aThe player &6%player%&a is now successfully hidden"
+        self: "&aYou are successfully hidden"
+        selector: "&6%amount%&a players have been successfully hidden"
+      show:
+        other: "&aThe player &6%player%&a is now successfully shown"
+        self: "&aYou have been successfully shown"
+        selector: "&6%amount%&a players have been successfully shown"
+      reset:
+        other: "&aThe player &6%player%&a has been successfully reset"
+        self: "&aYou have been reset successfully"
+        selector: "&6%amount%&a players have been reset"
+
+  name:
+    success:
+      change:
+        other: "&aSuccessfully changed the name of &6%player%&a to &6%to%&a"
+        self: "&aSuccessfully changed your name to &6%to%&a"
+      hide:
+        other: "&aThe name of &6%player%&a has been successfully hidden"
+        self: "&aYour nametag has been successfully hidden"
+        selector: "&aThe nametag of &6%amount%&a players has been hidden"
+      show:
+        other: "&aThe name of &6%player%&a has been successfully shown"
+        self: "&aYour nametag has been successfully shown"
+        selector: "&aThe nametag of &6%amount%&a players has been shown"
+      reset:
+        other: "&aSuccessfully reset the player &6%player%"
+        self: "&aYour nametag has been reset"
+        selector: "&aThe nametag of &6%amount%&a players has been reset"
+    error:
+      playerWithNameExists: "&cA player with the name &6%name%&c is already online."
+
+# The default Message Prefix that is used if only a name is supplied.
+# %sender% is replaced with the player sending the message
+# %receiver% is replaced with the player receiving the message
+globalMessageTemplate: "&6[[%sender%&r&6]]: &7"
+privateMessageTemplate: "&6[[%sender%&r&6]] -> [%receiver%]&7 "
+
+# The Language keys for this plugin
+lang:
+  playerNotFound: "&cNo player with the name %name%"
+  displayText: "You write as: %template%"
+
+  commands:
+    noPlayer: "&cYou have to be a player to use this command!"
+
+    setname:
+      success: "&aSuccessfully changed message name template"
+      invalidFormat: "&cInvalid format! Templates have to be enclosed in \"\""
+      toManyArgs: "&cTo many arguments"
+      reset: "&aSuccessfully reset message name template. You now write as yourself"
