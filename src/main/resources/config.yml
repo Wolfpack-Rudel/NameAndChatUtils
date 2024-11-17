@@ -4,8 +4,6 @@ commands:
   invalidPlayer: "&cUnknown player with name &6%player%"
   noPlayersModified: "&cNo player modified"
   invalidSelector: "&cInvalid selector: &6%selector%"
-  playerNotFound: "&cNo player with the name %name%"
-  displayText: "You write as: %template%"
 
   skin:
     success:
@@ -58,9 +56,22 @@ commands:
     error:
       playerWithNameExists: "&cA player with the name &6%name%&c is already online."
 
-  setname:
-    success: "&aSuccessfully changed message name template"
-    invalidFormat: "&cInvalid format! Templates have to be enclosed in \"\""
-    toManyArgs: "&cTo many arguments"
-    reset: "&aSuccessfully reset message name template. You now write as yourself"
+# The default Message Prefix that is used if only a name is supplied.
+# %sender% is replaced with the player sending the message
+# %receiver% is replaced with the player receiving the message
+globalMessageTemplate: "&6[[%sender%&r&6]]: &7"
+privateMessageTemplate: "&6[[%sender%&r&6]] -> [%receiver%]&7 "
+
+# The Language keys for this plugin
+lang:
+  playerNotFound: "&cNo player with the name %name%"
+  displayText: "You write as: %template%"
+
+  commands:
     noPlayer: "&cYou have to be a player to use this command!"
+
+    setname:
+      success: "&aSuccessfully changed message name template"
+      invalidFormat: "&cInvalid format! Templates have to be enclosed in \"\""
+      toManyArgs: "&cTo many arguments"
+      reset: "&aSuccessfully reset message name template. You now write as yourself"
