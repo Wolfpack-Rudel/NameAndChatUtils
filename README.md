@@ -8,6 +8,7 @@ The Plugin gives you the Option to write as other people.
 - Change your chat display name using a template defined in the config.
 - Define a global and private name template for maximum usability
 
+## Commands
 ### The _name_ command:
 
 - `/name change (player) [name]` Change the nametag of a player.
@@ -59,5 +60,5 @@ customchatmessages.commands.setname
 # PlayerDisplay (Api)
 
 To use this plugin as an api in your plugin, the plugin has to be installed on the server.
-After that you can get the api instance by using `PlayerDisplay#getApi`.
+After that you can get the api instance by using `NameAndChatUtils#getApi`.
 This provides you with all the necessary methods to change the players skin/name. 
