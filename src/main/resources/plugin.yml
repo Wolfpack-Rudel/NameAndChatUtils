@@ -1,0 +1,12 @@
+name: NameAndChatUtils
+version: '${project.version}'
+main: de.wolfpackrudel.nameandchatutils.NameAndChatUtils
+api-version: '1.21'
+authors: [LouiLetsPlayPro]
+description: The Name & Chat Utils of Wolfpack
+website: https://wolfpack-rudel.de
+commands:
+  setName:
+    description: Change your Name
+    usage: /setname
+    permission: customchatmessages.commands.setname
