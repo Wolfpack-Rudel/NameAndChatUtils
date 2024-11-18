@@ -5,10 +5,8 @@ import de.wolfpackrudel.nameandchatutils.api.def.INameAndChatUtilsApi;
 import de.wolfpackrudel.nameandchatutils.api.impl.NameAndChatUtilsApi;
 import de.wolfpackrudel.nameandchatutils.commands.NameCommand;
 import de.wolfpackrudel.nameandchatutils.commands.PlayerDisplayCommand;
-import de.wolfpackrudel.nameandchatutils.commands.SetNameCommand;
 import de.wolfpackrudel.nameandchatutils.commands.SkinCommand;
 import de.wolfpackrudel.nameandchatutils.lang.Language;
-import de.wolfpackrudel.nameandchatutils.listener.ChatMessageListener;
 import de.wolfpackrudel.nameandchatutils.listener.DisconnectListener;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
@@ -16,16 +14,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.util.HashMap;
 
 public final class NameAndChatUtils extends JavaPlugin {
 
     public static String PREFIX;
     private static NameAndChatUtils instance;
     private static NameAndChatUtilsApi api;
-    private HashMap<Player, TemplateHolder> playerTemplates;
-
-    SetNameCommand setNameCommand;
 
     @Override
     public void onEnable() {
@@ -55,10 +49,6 @@ public final class NameAndChatUtils extends JavaPlugin {
         commandManager.registerCommand(new PlayerDisplayCommand());
         commandManager.enableUnstableAPI("help");
 
-        setNameCommand = new SetNameCommand();
-        this.getCommand("setname").setExecutor(new SetNameCommand());
-        Bukkit.getServer().getPluginManager().registerEvents(new ChatMessageListener(), this);
-
         /*
         *   Register Events
         */
@@ -71,7 +61,6 @@ public final class NameAndChatUtils extends JavaPlugin {
         for (Player player : Bukkit.getOnlinePlayers()) {
             api.reset(player);
         }
-        setNameCommand.stopAllTasks();
     }
 
     public static NameAndChatUtils getInstance() {
@@ -80,9 +69,5 @@ public final class NameAndChatUtils extends JavaPlugin {
 
     public static INameAndChatUtilsApi getApi() {
         return api;
-    }
-
-    public HashMap<Player, TemplateHolder> getPlayerTemplates() {
-        return playerTemplates;
     }
 }

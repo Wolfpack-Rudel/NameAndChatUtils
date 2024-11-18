@@ -24,16 +24,16 @@ public class NameAndChatUtilsApi implements INameAndChatUtilsApi {
 
     private static final String INVIS_NAMETAG_TEAM_NAME = "_invisNametag";
 
-    private INameAndChatUtilsUtil playerDisplayUtil;
-    private HashMap<UUID, TextureData> previousSkins;
-    private HashMap<String, TextureData> cachedData;
-    private HashMap<UUID, String> previousNames;
-    private HashMap<UUID, Team> previousTeams;
-    private MineskinClient client;
+    private final INameAndChatUtilsUtil playerDisplayUtil;
+    private final HashMap<UUID, TextureData> previousSkins;
+    private final HashMap<String, TextureData> cachedData;
+    private final HashMap<UUID, String> previousNames;
+    private final HashMap<UUID, Team> previousTeams;
+    private final MineskinClient client;
     private Team invisibleNametagTeam;
 
 
-    public void PlayerDisplayApi() {
+    public NameAndChatUtilsApi() {
         playerDisplayUtil = new PlayerDisplayUtil();
 
         previousSkins = new HashMap<>();
@@ -193,6 +193,7 @@ public class NameAndChatUtilsApi implements INameAndChatUtilsApi {
 
     @Override
     public String getBasePlayerName(Player player) {
+
         if (previousNames.containsKey(player.getUniqueId())) return previousNames.get(player.getUniqueId());
         return player.getName();
     }
