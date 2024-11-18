@@ -4,10 +4,6 @@ NameAndChatUtils is a plugin as well as an api connector to change the players s
 It also allows the user to show and hide other players.
 The Plugin gives you the Option to write as other people.
 
-## Features
-- Change your chat display name using a template defined in the config.
-- Define a global and private name template for maximum usability
-
 ## Commands
 ### The _name_ command:
 
@@ -30,11 +26,6 @@ The Plugin gives you the Option to write as other people.
 - `/pd hide (selector)` Hide the selected players.
 - `/pd reset (selector)` Reset the skin/name/visibility of the selected players.
 
-
-### The _setname_ command:
-- `/setname <name>`: Change your chat display name using a prefix defined in the config.
-- `/setname <gloablTemplate> <privateTemplate>`: Define a global and a private message template.
-
 ## Permissions
 
 ```properties
@@ -53,8 +44,6 @@ playerdisplay.commands.name.change
 playerdisplay.commands.name.show
 playerdisplay.commands.name.hide
 playerdisplay.commands.name.reset
-# Commands (setname)
-customchatmessages.commands.setname
 ```
 
 # PlayerDisplay (Api)

@@ -55,23 +55,3 @@ commands:
         selector: "&aThe nametag of &6%amount%&a players has been reset"
     error:
       playerWithNameExists: "&cA player with the name &6%name%&c is already online."
-
-# The default Message Prefix that is used if only a name is supplied.
-# %sender% is replaced with the player sending the message
-# %receiver% is replaced with the player receiving the message
-globalMessageTemplate: "&6[[%sender%&r&6]]: &7"
-privateMessageTemplate: "&6[[%sender%&r&6]] -> [%receiver%]&7 "
-
-# The Language keys for this plugin
-lang:
-  playerNotFound: "&cNo player with the name %name%"
-  displayText: "You write as: %template%"
-
-  commands:
-    noPlayer: "&cYou have to be a player to use this command!"
-
-    setname:
-      success: "&aSuccessfully changed message name template"
-      invalidFormat: "&cInvalid format! Templates have to be enclosed in \"\""
-      toManyArgs: "&cTo many arguments"
-      reset: "&aSuccessfully reset message name template. You now write as yourself"
